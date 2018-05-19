@@ -1,0 +1,33 @@
+﻿@namespace ThorCaseStudy.Views.Thor
+    @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head><title></title></head>
+  <body>
+      Hello
+      <table class="table">
+          <thead>
+              <tr>
+                  <th>
+                      @Html.DisplayNameFor(model => model.thor[0].Title)
+                  </th>
+
+                  <th></th>
+              </tr>
+          </thead>
+          <tbody>
+              @foreach (var item in Model.thor)
+              {
+              <tr>
+                  <td>
+                      @Html.DisplayFor(modelItem => item.Title)
+                  </td>
+
+              </tr>
+              }
+          </tbody>
+
+      </table>
+  </body>
+</html>
+

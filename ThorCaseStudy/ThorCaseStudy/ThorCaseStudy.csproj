@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <DotNetCliToolReference Include="Microsoft.EntityFrameworkCore.Tools.DotNet" Version="2.0.0" />
+    <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Views\Thor\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Views\Thor\EmptyHTMLFile.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="Views\Thor\_ViewImports.cshtml" />
+    <Content Remove="Views\Thor\Thor\_ViewImports.cshtml" />
+    <Content Remove="Views\Thor\Thor\thor.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Views\Thor\Thor\_ViewImports.cshtml" />
+    <None Include="Views\Thor\Thor\thor.cshtml" />
+  </ItemGroup>
+</Project>
